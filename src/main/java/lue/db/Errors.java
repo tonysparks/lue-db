@@ -16,4 +16,9 @@ public class Errors {
     public static LueException invalidBlockId(long blockId) {
         return new LueException(String.format("Invalid block id '%d'", blockId));
     }
+    
+    
+    public static LueException blockAllocFailed() {
+        return new LueException(String.format("Failed to allocate a new Block"));
+    }
 }

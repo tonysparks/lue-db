@@ -107,7 +107,7 @@ public class VfsBlockStorage implements BlockStorage {
     }
     
     private long getBlockPosition(long blockId) {
-        long filePos = getFormatHeaderSize() + blockId * blockSize();
+        long filePos = getFormatHeaderSize() + (Math.max(blockId-1, 0) * blockSize());
         return filePos;
     }
     

@@ -23,7 +23,7 @@ public class MemFile implements File {
      */
     public MemFile(Path path) {
         this.path = path;
-        this.buffer = ByteBuffer.allocate(1024);
+        this.buffer = ByteBuffer.allocate(0);
     }
 
     @Override
